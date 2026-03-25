@@ -78,3 +78,11 @@ NEXT STEPS FOR PHASE 3 (Data Cleaning & Visualization):
 2. Investigate the 'utilidades_domesticas' price outliers (Gap: 6,644) to determine if records should be excluded or capped to prevent skewed dashboard averages.
 3. Prepare the final SQL View for Power BI import.
 */
+
+-- AUDIT 4: Total Record Count & Scalability Check
+-- Business Impact: Confirms the full scope of the dataset for capacity planning.
+SELECT 
+    (SELECT COUNT(*) FROM olist_order_items_dataset) as total_items,
+    (SELECT COUNT(*) FROM olist_orders_dataset) as total_orders,
+    (SELECT COUNT(*) FROM olist_products_dataset) as total_products;
+-- FINDING: Project manages a multi-table relational ecosystem exceeding 100,000+ rows.
