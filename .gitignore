@@ -1,0 +1,17 @@
+# Ignore large data files
+*.csv
+*.xlsx
+*.zip
+
+# Ignore Python environment and cache
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore other school projects if they are in this folder
+# (Replace 'Other_Project_Name' with the actual folder names you want to hide)
+Other_Project_Name/
